@@ -1,0 +1,29 @@
+{
+  "name": "react-katex",
+  "version": "1.0.0",
+  "description": "React component using Khan Academy's Katex library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruv004/React-Katex.git"
+  },
+  "keywords": [
+    "react",
+    "latex",
+    "katex",
+    "math"
+  ],
+  "author": "Dhruv <dhruv.datt@talentica.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhruv004/React-Katex/issues"
+  },
+  "homepage": "https://github.com/dhruv004/React-Katex#readme",
+  "dependencies": {
+    "katex": "0.7.1",
+    "react": "15.4.2"
+  }
+}
