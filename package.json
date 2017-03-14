@@ -23,7 +23,20 @@
   },
   "homepage": "https://github.com/dhruv004/React-Katex#readme",
   "dependencies": {
-    "katex": "0.7.1",
-    "react": "15.4.2"
+    "katex": "0.7.1"
+  },
+  "devDependencies": {
+    "babel-core": "6.24.0",
+    "browserify": "14.1.0",
+    "gulp": "3.9.1",
+    "gulp-html-replace": "1.6.2",
+    "gulp-react": "3.1.0",
+    "gulp-streamify": "1.0.2",
+    "gulp-uglify": "2.1.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "reactify": "1.1.1",
+    "vinyl-source-stream": "1.1.0",
+    "watchify": "3.9.0"
   }
 }
