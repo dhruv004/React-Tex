@@ -1,6 +1,7 @@
 
 [![Build Status](https://travis-ci.org/dhruv004/React-Tex.svg?branch=master)](https://travis-ci.org/dhruv004/React-Tex)
 [![npm version](https://badge.fury.io/js/react-tex.svg)](https://badge.fury.io/js/react-tex)
+[![dependencies Status](https://david-dm.org/boennemann/badges/status.svg)](https://david-dm.org/boennemann/badges)
 
 
 # React-Tex
