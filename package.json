@@ -1,6 +1,6 @@
 {
   "name": "react-tex",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "React component using Khan Academy's Katex library",
   "main": "src/index.js",
   "scripts": {
