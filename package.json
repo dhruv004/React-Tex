@@ -1,6 +1,6 @@
 {
   "name": "react-tex",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React component using Khan Academy's Katex library",
   "main": "src/index.js",
   "scripts": {
@@ -25,24 +25,15 @@
   },
   "homepage": "https://github.com/dhruv004/React-Katex#readme",
   "dependencies": {
-    "katex": "0.7.1"
+    "katex": "0.7.1",
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
   },
   "devDependencies": {
     "babel-cli": "6.24.0",
     "babel-core": "6.24.0",
     "babel-preset-es2015": "6.24.0",
     "babel-preset-react": "6.23.0",
-    "babel-preset-stage-0": "6.22.0",
-    "browserify": "14.1.0",
-    "gulp": "3.9.1",
-    "gulp-html-replace": "1.6.2",
-    "gulp-react": "3.1.0",
-    "gulp-streamify": "1.0.2",
-    "gulp-uglify": "2.1.0",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "reactify": "1.1.1",
-    "vinyl-source-stream": "1.1.0",
-    "watchify": "3.9.0"
+    "babel-preset-stage-0": "6.22.0"
   }
 }
