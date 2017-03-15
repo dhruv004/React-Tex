@@ -11,4 +11,6 @@ LatexComponent = React.createClass({
     }
 })
     
-module.exports = LatexComponent;
+module.exports = {
+    "katex":LatexComponent
+}

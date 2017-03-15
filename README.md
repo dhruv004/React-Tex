@@ -1,1 +1,1 @@
-# React-Katex
+# React-Tex
