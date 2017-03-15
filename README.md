@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dhruv004/React-Tex.svg?branch=master)](https://travis-ci.org/dhruv004/React-Tex)
+
 # React-Tex
 
 ## Install
