@@ -3,14 +3,6 @@ import React,{Component} from 'react';
 import katex from 'katex';
 
 class InlineTex extends Component{
-    constructor(props){
-        super(props);
-        this.props={
-            "texContent":"",
-            "texSeperator":"${2}"
-        }
-    }
-
     render(){
         let { texContent, texSeperator} = this.props;
         let pattern  = new RegExp("\\" + texSeperator + "(.*?)\\" + texSeperator,"g")
@@ -23,5 +15,10 @@ class InlineTex extends Component{
         )
     }
 }
+
+InlineTex.defaultProps = {
+    "texContent":'',
+    "texSeperator": '${2}'
+};
 
 export {InlineTex}

@@ -29,6 +29,11 @@ class TexWrapper extends Component{
   }
 }
 ```
+
+Available props for Tex are:
+
+- `texContent`: `string`. Latex string . (default: ``)
+
 For Inline component wrap the latex string in between $$
 ```js
 import {InlineTex} from 'react-tex';
@@ -44,6 +49,11 @@ class InlineTexWrapper extends Component{
   }
 }
 ```
+
+Available props for InlineTex are:
+
+- `texContent`: `string`. Latex string . (default: ``)
+- `texSeperator`: `string`. Latex string seperator using regex . (default: `${2}`)
 
 2. Include Katex CSS in your html
 

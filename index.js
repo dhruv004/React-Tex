@@ -26,16 +26,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var InlineTex = function (_Component) {
     _inherits(InlineTex, _Component);
 
-    function InlineTex(props) {
+    function InlineTex() {
         _classCallCheck(this, InlineTex);
 
-        var _this = _possibleConstructorReturn(this, (InlineTex.__proto__ || Object.getPrototypeOf(InlineTex)).call(this, props));
-
-        _this.props = {
-            "texContent": "",
-            "texSeperator": "${2}"
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (InlineTex.__proto__ || Object.getPrototypeOf(InlineTex)).apply(this, arguments));
     }
 
     _createClass(InlineTex, [{
@@ -60,6 +54,11 @@ var InlineTex = function (_Component) {
 
     return InlineTex;
 }(_react.Component);
+
+InlineTex.defaultProps = {
+    "texContent": '',
+    "texSeperator": '${2}'
+};
 
 exports.InlineTex = InlineTex;
 "use strict";
