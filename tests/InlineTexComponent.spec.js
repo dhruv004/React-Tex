@@ -3,12 +3,12 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import Tex from '../index';
+import {InlineTex} from '../index';
 
-describe('<Tex />', () => {
+describe('<InlineTex />', () => {
     let wrapper;
     beforeEach(function() {
-        wrapper = shallow(<Tex texContent="\int_{a}^{b} f(x)dx = F(b) - F(a)"/>);
+        wrapper = shallow(<InlineTex texContent="\int_{a}^{b} f(x)dx = F(b) - F(a)"/>);
     });
 
     it("renders basic component", () => {

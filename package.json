@@ -1,11 +1,11 @@
 {
   "name": "react-tex",
-  "version": "1.2.5",
+  "version": "1.3.0",
   "description": "React component using Khan Academy's Katex library",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha tests/.setup.js tests/**/*.spec.js",
-    "build": "./node_modules/.bin/babel ./src/js/index.js -o index.js",
+    "build": "./node_modules/.bin/babel ./src/js -o index.js",
     "prepublish": "npm run build"
   },
   "repository": {

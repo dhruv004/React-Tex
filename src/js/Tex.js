@@ -2,7 +2,7 @@
 import React,{Component} from 'react';
 import katex from 'katex';
 
-class Tex extends Component{
+export class Tex extends Component{
     render(){
         let { texContent } = this.props;
         let katexString = katex.renderToString(texContent,{"throwOnError":false});
@@ -11,5 +11,3 @@ class Tex extends Component{
         )
     }
 }
-
-export default Tex

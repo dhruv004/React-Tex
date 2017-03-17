@@ -16,18 +16,35 @@ $ npm install --save react-tex
 
 1.In your component
 ```js
-import Tex from 'react-tex';
+import {Tex} from 'react-tex';
 
 class TexWrapper extends Component{
   render(){
+    let latexString = "\int_{a}^{b} f(x)dx = F(b) - F(a)";
     return(
       <div>
-        <Tex texContent="\int_{a}^{b} f(x)dx = F(b) - F(a)"/>
+        <Tex texContent={latexString}/>
       </div>
     )
   }
 }
 ```
+For Inline component wrap the latex string in between $$
+```js
+import {InlineTex} from 'react-tex';
+
+class InlineTexWrapper extends Component{
+  render(){
+    let latexString = "This is inline $$\int_{a}^{b} f(x)dx = F(b) - F(a)$$ latex string";
+    return(
+      <div>
+        <InlineTex texContent={latexString}/>
+      </div>
+    )
+  }
+}
+```
+
 2. Include Katex CSS in your html
 
 ```html
