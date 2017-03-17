@@ -29,6 +29,7 @@ class TexWrapper extends Component{
   }
 }
 ```
+Output:![tex](https://cloud.githubusercontent.com/assets/17777371/24044786/bd8233ce-0b42-11e7-9a48-4abf6d90ed0e.png)
 
 Available props for Tex are:
 
@@ -49,6 +50,7 @@ class InlineTexWrapper extends Component{
   }
 }
 ```
+Output:![inlinetex](https://cloud.githubusercontent.com/assets/17777371/24044794/c554ccf6-0b42-11e7-8b06-9718fb0d19d3.png)
 
 Available props for InlineTex are:
 
