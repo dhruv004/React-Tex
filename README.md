@@ -3,6 +3,9 @@
 [![npm version](https://badge.fury.io/js/react-tex.svg)](https://badge.fury.io/js/react-tex)
 [![dependencies Status](https://david-dm.org/boennemann/badges/status.svg)](https://david-dm.org/boennemann/badges)
 
+[![NPM](https://nodei.co/npm/react-tex.png)](https://nodei.co/npm/react-tex/)
+[![NPM](https://nodei.co/npm-dl/react-tex.png?months=3&height=3)](https://nodei.co/npm/react-tex/)
+
 
 # React-Tex
 
