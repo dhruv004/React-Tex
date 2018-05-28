@@ -1,23 +1,39 @@
 
+[![NPM](https://img.shields.io/npm/v/react-tex.svg)](https://www.npmjs.com/package/react-tex)
 [![Build Status](https://travis-ci.org/dhruv004/React-Tex.svg?branch=master)](https://travis-ci.org/dhruv004/React-Tex)
-[![npm version](https://badge.fury.io/js/react-tex.svg)](https://badge.fury.io/js/react-tex)
-[![dependencies Status](https://david-dm.org/boennemann/badges/status.svg)](https://david-dm.org/boennemann/badges)
-
-[![NPM](https://nodei.co/npm/react-tex.png)](https://nodei.co/npm/react-tex/)
-[![NPM](https://nodei.co/npm-dl/react-tex.png?months=12&height=3)](https://nodei.co/npm/react-tex/)
-
 
 # React-Tex
 
-## Install
+Display TeX-based math with [React](https://github.com/facebook/react) and [KaTeX](https://github.com/Khan/KaTeX).
+
+---
+
+## Installation
+
+react-tex is available as an [NPM package](https://www.npmjs.com/package/react-tex):
 
 ```sh
 $ npm install --save react-tex
 ```
 
-## Using
+You can [download KaTeX](https://github.com/khan/katex/releases) and host it on your server or include the `katex.min.css` file on your page directly from a CDN:
 
-1.In your component
+```html
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+```
+
+## Usage
+
+react-tex has two components you can use, `<Tex>` and `<InlineTex>`.
+
+### TeX
+
+The `<Tex>` component allows you to display TeX-based math.
+
+![tex](https://cloud.githubusercontent.com/assets/17777371/24044786/bd8233ce-0b42-11e7-9a48-4abf6d90ed0e.png)
+
+This expected output is produced by the following example:
+
 ```js
 import {Tex} from 'react-tex';
 
@@ -32,13 +48,21 @@ class TexWrapper extends Component{
   }
 }
 ```
-Output:![tex](https://cloud.githubusercontent.com/assets/17777371/24044786/bd8233ce-0b42-11e7-9a48-4abf6d90ed0e.png)
 
-Available props for Tex are:
+You can use the following props with Tex:
 
-- `texContent`: `string`. Latex string . (default: ``)
+| Property | Type | Default | Description |
+|:---|:---|:---|:---|
+| `texContent` | string | `` | Latex string |
 
-For Inline component wrap the latex string in between $$
+### Inline TeX
+
+The `<InlineTex>` component allows you to display TeX-based math inline with text by wrapping a TeX string with double dollar signs (`$$`).
+
+![inlinetex](https://cloud.githubusercontent.com/assets/17777371/24044794/c554ccf6-0b42-11e7-8b06-9718fb0d19d3.png) 
+
+This expected output is produced by the following example:
+
 ```js
 import {InlineTex} from 'react-tex';
 
@@ -53,21 +77,10 @@ class InlineTexWrapper extends Component{
   }
 }
 ```
-Output:![inlinetex](https://cloud.githubusercontent.com/assets/17777371/24044794/c554ccf6-0b42-11e7-8b06-9718fb0d19d3.png)
 
-Available props for InlineTex are:
+You can use the following props with InlineTex:
 
-- `texContent`: `string`. Latex string . (default: ``)
-- `texSeperator`: `string`. Latex string seperator using regex . (default: `${2}`)
-
-2. Include Katex CSS in your html
-
-```html
-
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
-    </head>
-</html>
-
-```
+| Property | Type | Default | Description |
+|:---|:---|:---|:---|
+| `texContent` | string | `` | TeX string |
+| `texSeperator` | string | `${2}` | Regex string to seperate TeX from text |
