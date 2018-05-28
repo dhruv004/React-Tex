@@ -53,7 +53,7 @@ You can use the following props with Tex:
 
 | Property | Type | Default | Description |
 |:---|:---|:---|:---|
-| `texContent` | string | `` | Latex string |
+| `texContent` | string | `` | TeX string |
 
 ### Inline TeX
 
