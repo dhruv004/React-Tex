@@ -2,7 +2,7 @@
 [![NPM](https://img.shields.io/npm/v/react-tex.svg)](https://www.npmjs.com/package/react-tex)
 [![Build Status](https://travis-ci.org/dhruv004/React-Tex.svg?branch=master)](https://travis-ci.org/dhruv004/React-Tex)
 
-# React-Tex
+# react tex
 
 Display TeX-based math with [React](https://github.com/facebook/react) and [KaTeX](https://github.com/Khan/KaTeX).
 
