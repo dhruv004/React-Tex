@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
 import {InlineTex} from '../index';
 
 describe('<InlineTex />', () => {

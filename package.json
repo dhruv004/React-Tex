@@ -4,7 +4,7 @@
   "description": "React component using Khan Academy's Katex library",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha tests/.setup.js tests/**/*.spec.js",
+    "test": "mocha tests/.transpile.js tests/.setup.js tests/**/*.spec.js",
     "build": "./node_modules/.bin/babel ./src/js -o index.js",
     "prepublish": "npm run build"
   },
@@ -39,8 +39,9 @@
     "babel-register": "6.26.0",
     "chai": "4.1.2",
     "enzyme": "3.3.0",
-    "jsdom": "9.12.0",
+    "enzyme-adapter-react-16": "1.1.1",
     "mocha": "5.2.0",
-    "react-addons-test-utils": "15.6.2"
+    "react-addons-test-utils": "15.6.2",
+    "react-test-renderer": "16.4.0"
   }
 }
