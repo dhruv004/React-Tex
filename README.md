@@ -19,7 +19,7 @@ $ npm install --save react-tex
 You can [download KaTeX](https://github.com/khan/katex/releases) and host it on your server or include the `katex.min.css` file on your page directly from a CDN:
 
 ```html
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ The `<Tex>` component allows you to display TeX-based math.
 This expected output is produced by the following example:
 
 ```js
-import {Tex} from 'react-tex';
+import { Tex } from 'react-tex';
 
 class TexWrapper extends Component{
   render(){
@@ -64,7 +64,7 @@ The `<InlineTex>` component allows you to display TeX-based math inline with tex
 This expected output is produced by the following example:
 
 ```js
-import {InlineTex} from 'react-tex';
+import { InlineTex } from 'react-tex';
 
 class InlineTexWrapper extends Component{
   render(){
