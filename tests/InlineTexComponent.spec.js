@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { expect } from 'chai';
-import {InlineTex} from '../index';
+import { InlineTex } from '../src/js/InlineTex';
 
 describe('<InlineTex />', () => {
     let wrapper;

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { expect } from 'chai';
-import {Tex} from '../index';
+import { Tex } from '../src/js/Tex';
 
 describe('<Tex />', () => {
     let wrapper;

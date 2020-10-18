@@ -1,113 +1,126 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.InlineTex = undefined;
+exports.InlineTex = void 0;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
-var _react = require('react');
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _react2 = _interopRequireDefault(_react);
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
-var _katex = require('katex');
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _katex2 = _interopRequireDefault(_katex);
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+var _react = _interopRequireWildcard(require("react"));
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _katex = _interopRequireDefault(require("katex"));
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
-var InlineTex = function (_Component) {
-    _inherits(InlineTex, _Component);
+var InlineTex = /*#__PURE__*/function (_Component) {
+  (0, _inherits2["default"])(InlineTex, _Component);
 
-    function InlineTex() {
-        _classCallCheck(this, InlineTex);
+  var _super = _createSuper(InlineTex);
 
-        return _possibleConstructorReturn(this, (InlineTex.__proto__ || Object.getPrototypeOf(InlineTex)).apply(this, arguments));
+  function InlineTex() {
+    (0, _classCallCheck2["default"])(this, InlineTex);
+    return _super.apply(this, arguments);
+  }
+
+  (0, _createClass2["default"])(InlineTex, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          texContent = _this$props.texContent,
+          texSeperator = _this$props.texSeperator;
+      var pattern = new RegExp("\\" + texSeperator + "(.*?)\\" + texSeperator, "g");
+      var html = texContent.replace(pattern, function (x) {
+        var string = x.split(new RegExp("\\" + texSeperator))[1];
+        return string ? _katex["default"].renderToString(string, {
+          "throwOnError": false
+        }) : "";
+      });
+      return /*#__PURE__*/_react["default"].createElement("span", {
+        dangerouslySetInnerHTML: {
+          __html: html
+        }
+      });
     }
-
-    _createClass(InlineTex, [{
-        key: 'render',
-        value: function () {
-            function render() {
-                var _props = this.props,
-                    texContent = _props.texContent,
-                    texSeperator = _props.texSeperator;
-
-                var pattern = new RegExp("\\" + texSeperator + "(.*?)\\" + texSeperator, "g");
-                var html = texContent.replace(pattern, function (x) {
-                    var string = x.split(new RegExp("\\" + texSeperator))[1];
-                    return string ? _katex2['default'].renderToString(string, { "throwOnError": false }) : "";
-                });
-                return _react2['default'].createElement('span', { dangerouslySetInnerHTML: { __html: html } });
-            }
-
-            return render;
-        }()
-    }]);
-
-    return InlineTex;
+  }]);
+  return InlineTex;
 }(_react.Component);
-
-InlineTex.defaultProps = {
-    "texContent": '',
-    "texSeperator": '${2}'
-};
 
 exports.InlineTex = InlineTex;
+InlineTex.defaultProps = {
+  "texContent": '',
+  "texSeperator": '${2}'
+};
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.Tex = undefined;
+exports.Tex = void 0;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
-var _react = require('react');
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _react2 = _interopRequireDefault(_react);
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
-var _katex = require('katex');
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _katex2 = _interopRequireDefault(_katex);
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+var _react = _interopRequireWildcard(require("react"));
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _katex = _interopRequireDefault(require("katex"));
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
-var Tex = exports.Tex = function (_Component) {
-    _inherits(Tex, _Component);
+var Tex = /*#__PURE__*/function (_Component) {
+  (0, _inherits2["default"])(Tex, _Component);
 
-    function Tex() {
-        _classCallCheck(this, Tex);
+  var _super = _createSuper(Tex);
 
-        return _possibleConstructorReturn(this, (Tex.__proto__ || Object.getPrototypeOf(Tex)).apply(this, arguments));
+  function Tex() {
+    (0, _classCallCheck2["default"])(this, Tex);
+    return _super.apply(this, arguments);
+  }
+
+  (0, _createClass2["default"])(Tex, [{
+    key: "render",
+    value: function render() {
+      var texContent = this.props.texContent;
+
+      var katexString = _katex["default"].renderToString(texContent, {
+        "throwOnError": false
+      });
+
+      return /*#__PURE__*/_react["default"].createElement("span", {
+        dangerouslySetInnerHTML: {
+          __html: katexString
+        }
+      });
     }
-
-    _createClass(Tex, [{
-        key: 'render',
-        value: function () {
-            function render() {
-                var texContent = this.props.texContent;
-
-                var katexString = _katex2['default'].renderToString(texContent, { "throwOnError": false });
-                return _react2['default'].createElement('span', { dangerouslySetInnerHTML: { __html: katexString } });
-            }
-
-            return render;
-        }()
-    }]);
-
-    return Tex;
+  }]);
+  return Tex;
 }(_react.Component);
+
+exports.Tex = Tex;

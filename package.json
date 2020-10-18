@@ -3,8 +3,9 @@
   "version": "1.4.0",
   "description": "React component using Khan Academy's Katex library",
   "main": "src/index.js",
+  "private": "false",
   "scripts": {
-    "test": "mocha tests/.transpile.js tests/.setup.js tests/**/*.spec.js",
+    "test": "mocha --require @babel/register tests/.setup.js tests/**/*.spec.js",
     "build": "./node_modules/.bin/babel ./src/js -o index.js",
     "prepublish": "npm run build"
   },
@@ -18,30 +19,28 @@
     "katex",
     "math"
   ],
-  "author": "Dhruv <dhruv.datt@talentica.com>",
+  "author": "Dhruv",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dhruv004/React-Katex/issues"
   },
   "homepage": "https://github.com/dhruv004/React-Katex#readme",
   "dependencies": {
-    "katex": "0.10.0-alpha",
-    "react": "16.4.0",
-    "react-dom": "16.4.0"
+    "katex": "0.12.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.3",
-    "babel-preset-airbnb": "2.4.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-react": "6.24.1",
-    "babel-preset-stage-0": "6.24.1",
-    "babel-register": "6.26.0",
-    "chai": "4.1.2",
-    "enzyme": "3.3.0",
-    "enzyme-adapter-react-16": "1.1.1",
-    "mocha": "5.2.0",
-    "react-addons-test-utils": "15.6.2",
-    "react-test-renderer": "16.4.0"
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-react": "7.12.1",
+    "@babel/register": "7.12.1",
+    "babel-preset-airbnb": "5.0.0",
+    "chai": "4.2.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.5",
+    "mocha": "8.2.0",
+    "react-addons-test-utils": "15.6.2"
   }
 }
