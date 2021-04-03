@@ -84,3 +84,6 @@ You can use the following props with InlineTex:
 |:---|:---|:---|:---|
 | `texContent` | string | `` | TeX string |
 | `texSeperator` | string | `${2}` | Regex string to seperate TeX from text |
+
+
+[![Buy me a coffee!](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/ddbmc)
